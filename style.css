@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #BA91C6;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #772791;
+  }
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: 'Nunito', sans-serif;
 }
 
 main,
-header,
 footer {
   padding: 1rem;
   margin: 0 auto;
@@ -17,6 +30,13 @@ header {
   display: flex;
   gap: 1rem;
   align-items: center;
+  background-color: white;
+  color: #222;
+  border-radius: 1rem;
+  padding: 0;
+  padding-left: 1rem;
+  margin: 1rem auto;
+  max-width: min(calc(100vw - 3rem), 1024px);
 }
 
 header>img {
@@ -27,6 +47,14 @@ header>img {
 footer {
   margin-top: 2rem;
   color: #888;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+main > h2 {
+  margin-top: 3rem;
 }
 
 #flow-chart-wrapper {
@@ -50,6 +78,26 @@ footer {
   max-width: 100%;
 }
 
+a:visited, a {
+  color: var(--accent-color);
+  text-underline-offset: 2px;
+}
+
 li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border-width: 5px;
+  border-color: var(--accent-color);
+  border-style: solid;
+  opacity: 0.4;
+}
+
+aside {
+  font-style: italic;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #8884;
 }

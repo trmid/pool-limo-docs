@@ -43,11 +43,21 @@
 
   <main>
 
+    <nav>
+      <a href="#examples">Examples</a> •
+      <a href="#how-to-host-a-website">Host a Website</a> •
+      <a href="#how-to-redirect-to-a-website">Redirect your Domain</a> •
+      <a href="#more-guides">More Guides</a> •
+      <a href="#how-it-works">How it Works</a>
+    </nav>
     <p>
       A gateway for serving decentralized websites from <a href="https://names.pooly.me/" target="_blank" rel="noreferrer">.pool</a> domains.
     </p>
-    <br>
 
+    <br>
+    <hr>
+
+    <span id="examples"></span>
     <h2>Examples</h2>
     <ul>
       <li><a href="https://trmid.pool.limo" target="_blank" rel="noreferrer">trmid.pool.limo</a></li>
@@ -55,26 +65,50 @@
       <li><a href="https://ncookie.pool.limo" target="_blank" rel="noreferrer">ncookie.pool.limo</a></li>
       <li><a href="https://noxe.pool.limo" target="_blank" rel="noreferrer">noxe.pool.limo</a></li>
     </ul>
-    <br>
 
+    <br>
+    <hr>
+
+    <span id="how-to-host-a-website"></span>
     <h2>How to Host a Website</h2>
     <ol>
       <li>Get a <a href="https://names.pooly.me" target="_blank" rel="noreferrer">.pool domain</a>.</li>
       <li>Add your static website to the IPFS network. (<a href="https://docs.ipfs.tech/how-to/websites-on-ipfs/single-page-website/" target="_blank" rel="noreferrer">full IPFS tutorial</a>)</li>
       <li>
         Add a "content" field to your domain with the value set to the IPFS URI of your website. It should look similar to the following:
+        <br>
         <img src="img/content-example.jpg" alt="content -> ipfs://QmTRcjoPELhuJrZ9TG9WHFYuqtDybQ6tsJUhbwXXSpK89z" width="300" style="border-radius: 0.5rem; margin-top: 0.5rem;">
       </li>
       <li>View your decentralized website at <i>&lt;your-name&gt;.pool.limo</i>!</li>
     </ol>
-    <br>
 
+    <br>
+    <hr>
+
+    <span id="how-to-redirect-to-a-website"></span>
+    <h2>How to Redirect to a Website</h2>
+    <ol>
+      <li>Get a <a href="https://names.pooly.me" target="_blank" rel="noreferrer">.pool domain</a>.</li>
+      <li>Set the "url" field of your domain to the URL that you would like it to redirect to.</li>
+      <li>
+        Go to <i>&lt;your-name&gt;.pool.limo</i> and it will redirect to the specified URL.
+        <aside>Note: this does not work while you have a content field set on your domain.</aside>
+      </li>
+    </ol>
+
+    <br>
+    <hr>
+
+    <span id="more-guides"></span>
     <h2>More Guides</h2>
     <ul>
       <li><a href="https://github.com/trmid/pool-limo#how-to-host-a-website-with-poollimo" target="_blank" rel="noreferrer">How to Host a Website with pool.limo</a></li>
     </ul>
-    <br>
 
+    <br>
+    <hr>
+
+    <span id="how-it-works"></span>
     <h2>How it Works</h2>
     <p>
       <strong>pool.limo</strong> is a completely client-side gateway. This means that when you request a site (<i>ex. name.pool.limo</i>), pool.limo serves your browser a micro-app that resolves the page content and caches it locally.
@@ -90,6 +124,16 @@
         <img src="img/how-it-works.svg" width="500px" />
       </div>
     </div>
+
+    <br>
+    <hr>
+
+    <span id="the-code"></span>
+    <h2>The Code</h2>
+    <p>
+      View the source code on <a href="https://github.com/trmid/pool-limo" target="_blank" rel="noreferrer">GitHub</a>.
+    </p>
+
   </main>
 
   <footer>
