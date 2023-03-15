@@ -2,14 +2,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-color: #BA91C6;
+    --accent-color: #6bd5e5;
+    --background-color: #222;
+    --color: white;
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: #772791;
+    --accent-color: #6bd5e5;
+    --background-color: white;
+    --color: #222;
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
@@ -17,31 +25,67 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
+  overflow-x: hidden;
 }
 
 main,
+header,
 footer {
   padding: 1rem;
   margin: 0 auto;
-  max-width: 1024px;
+  width: 1024px;
+  max-width: 100vw;
+}
+
+#line-top {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
 }
 
 header {
+  position: relative;
   display: flex;
   gap: 1rem;
+  justify-content: center;
   align-items: center;
   background-color: white;
-  color: #222;
-  border-radius: 1rem;
-  padding: 0;
-  padding-left: 1rem;
-  margin: 1rem auto;
-  max-width: min(calc(100vw - 3rem), 1024px);
+  border-radius: 0 0 1rem 1rem;
+  margin-bottom: 1rem;
+  z-index: 2;
 }
 
 header>img {
-  width: 64px;
-  height: 64px;
+  width: 300px;
+  max-width: 90vw;
+}
+
+@media screen and (min-width: 1024px) {
+  header::before, header::after {
+    content: "";
+    position: absolute;
+    top: calc(100px - 1rem);
+    width: 50vw;
+    height: 150px;
+    background-color: var(--background-color);
+  }
+  
+  header::before {
+    border-radius: 0 1rem 0 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+  
+  header::after {
+    border-radius: 1rem 0 0 0;
+    right: 0;
+    transform: translateX(100%);
+  }
 }
 
 footer {
@@ -91,6 +135,7 @@ hr {
   border-width: 5px;
   border-color: var(--accent-color);
   border-style: solid;
+  border-radius: 5px;
   opacity: 0.4;
 }
 
